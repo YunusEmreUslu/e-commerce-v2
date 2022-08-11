@@ -9,7 +9,6 @@ const Shop = () => {
   );
 };
 
-
 const App = () => {
   return (
     <Routes>
