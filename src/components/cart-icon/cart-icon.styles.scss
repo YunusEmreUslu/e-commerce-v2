@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-weight: bold;
 
   .shopping-icon {
     width: 24px;
@@ -14,8 +15,8 @@
 
   .item-count {
     position: absolute;
-    font-size: 10px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: bolder;
     bottom: 12px;
   }
 }
