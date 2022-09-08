@@ -37,13 +37,15 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
   );
 };
 
+const clearCartItem = (cartItems, cartItemToClear) =>
+  cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
+
 const CART_ACTION_TYPES = {
   SET_IS_CART_OPEN: 'SET_IS_CART_OPEN',
   SET_CART_ITEMS: 'SET_CART_ITEMS',
   SET_CART_COUNT: 'SET_CART_COUNT',
   SET_CART_TOTAL: 'SET_CART_TOTAL',
-};
-
+}
 const INITIAL_STATE = {
   isCartOpen: false,
   cartItems: [],
@@ -65,8 +67,7 @@ const cartReducer = (state, action) => {
   }
 };
 
-const clearCartItem = (cartItems, cartItemToClear) =>
-  cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
+
 
 export const CartContext = createContext({
   isCartOpen: false,
